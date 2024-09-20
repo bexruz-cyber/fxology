@@ -11,21 +11,15 @@
 <style>
     .custom-checkbox {
         -webkit-appearance: none;
-        /* Safari uchun */
         -moz-appearance: none;
-        /* Firefox uchun */
         appearance: none;
-        /* Standart ko'rinishni o'chirish */
         width: 20px;
         height: 20px;
         background-color: #252628;
         border: 2px solid #FFFFFF1A;
-        /* Ramka */
         border-radius: 4px;
-        /* Burchaklarni yumshatish */
         cursor: pointer;
         outline: none;
-        /* Fokusni o'chirish */
         display: flex;
         align-items: center;
         justify-content: center;
@@ -33,24 +27,18 @@
 
     .custom-checkbox:checked {
         background-color: #58E87733;
-        /* Tanlangan rang */
         border-color: #334D3B;
-        /* Ramka rangini o'zgartirish */
     }
 
     .custom-checkbox:checked::after {
         content: url(./img/Vector.svg);
-        /* Belgini qo'shish */
-        color: white;
-        left: 4px;
-        top: -1px;
     }
 </style>
 
 <body>
     <div class="fixed w-full h-full bg-[#0D0E10] top-0 left-0"></div>
-    <section class="bg-[#0D0E10] relative  z-20 w-full   pt-4 pb-3.5">
-        <div class="max-w-[1248px]   w-full flex gap-4 mx-auto">
+    <section class="bg-[#0D0E10] relative  z-20  w-full flex items-center justify-center  pt-4 pb-3.5">
+        <div class="max-w-[1248px] w-full flex gap-4 mx-auto">
             <div class="flex flex-col  max-w-[436px] w-full px-[17px] pt-[17px] pb-6 rounded-[20px] border border-[#FFFFFF1A]"
                 style="
             background-image: url(./img/steps.png) ;
@@ -280,46 +268,44 @@
                 <form class="flex flex-col gap-y-4 max-w-[567px]">
                     <div class="grid grid-cols-2 gap-x-3">
                         <div
-                            class="inp_box items-center transition-all duration-300 bg-[#16191D] flex flex-col rounded-xl border border-[#FFFFFF1A] py-[12px] px-4">
-                            <label for="firstname"
-                                class="label_inp w-full leading-[8px] font-normal text-xs text-[#FFFFFF80]">First
-                                name</label>
-                            <input type="text"
-                                class="input_ui w-full border-none outline-none bg-transparent  mt-3  font-normal text-xs leading-4 text-[#FFFFFF] placeholder:font-normal  placeholder:text-sm placeholder:leading-4 placeholder:text-[#FFFFFF]  transition-all duration-300"
-                                id="firstname" placeholder="Username">
+                            class="w-full relative h-[54px] border bg-[#16191D] flex flex-col rounded-xl  border-[#FFFFFF1A] px-4 ">
+                            <label for="username" id="username-label"
+                                class="absolute left-4 top-1/2 transition-all duration-300 transform -translate-y-1/2 text-[#FFFFFF80] cursor-text text-xs">Username</label>
+                            <input type="text" required id="username"
+                                class="w-full h-full bg-transparent text-white outline-none" placeholder="Username">
                         </div>
                         <div
-                            class="inp_box   items-center  transition-all duration-300 bg-[#16191D] flex flex-col rounded-xl border border-[#FFFFFF1A] py-[12px] px-4">
-                            <label for="Last_name"
-                                class="label_inp w-full leading-[8px] font-normal text-xs text-[#FFFFFF80]">Last
+                            class="w-full relative h-[54px] border bg-[#16191D] flex flex-col rounded-xl  border-[#FFFFFF1A] px-4 ">
+                            <label for="username" id="lastname-label"
+                                class="absolute left-4 top-1/2 transition-all duration-300 transform -translate-y-1/2 text-[#FFFFFF80] cursor-text text-xs">Last
                                 name</label>
-                            <input type="text"
-                                class="input_ui w-full border-none outline-none bg-transparent  mt-3  font-normal text-xs leading-4 text-[#FFFFFF] placeholder:font-normal  placeholder:text-sm placeholder:leading-4 placeholder:text-[#FFFFFF]  transition-all duration-300"
-                                id="Last_name" placeholder="Username">
+                            <input type="text" required id="lastname-label"
+                                class="w-full h-full bg-transparent text-white outline-none" placeholder="Last name">
                         </div>
                     </div>
                     <div class="grid grid-cols-2 gap-x-3">
                         <div
-                            class="inp_box   items-center  transition-all duration-300 bg-[#16191D] flex flex-col rounded-xl border border-[#FFFFFF1A] py-[12px] px-4">
-                            <label for="Address_Line_1"
-                                class="label_inp w-full leading-[8px] font-normal text-xs text-[#FFFFFF80]">Address Line
-                                1</label>
-                            <input type="text"
-                                class="input_ui w-full border-none outline-none bg-transparent  mt-3  font-normal text-xs leading-4 text-[#FFFFFF] placeholder:font-normal  placeholder:text-sm placeholder:leading-4 placeholder:text-[#FFFFFF]  transition-all duration-300"
-                                id="Address_Line_1" placeholder="Username">
+                            class="w-full relative h-[54px] border bg-[#16191D] flex flex-col rounded-xl  border-[#FFFFFF1A] px-4 ">
+                            <label for="username" id="AddressLine1"
+                                class="absolute left-4 top-1/2 transition-all duration-300 transform -translate-y-1/2 text-[#FFFFFF80] cursor-text text-xs">Address
+                                Line 1</label>
+                            <input type="text" required id="AddressLine1"
+                                class="w-full h-full bg-transparent text-white outline-none"
+                                placeholder="Address Line 1">
                         </div>
                         <div
-                            class="inp_box   items-center  transition-all duration-300 bg-[#16191D] flex flex-col rounded-xl border border-[#FFFFFF1A] py-[12px] px-4">
-                            <label for="Address_Line_2"
-                                class="label w-full font-normal text-xs text-[#FFFFFF80] leading-[8px]">Address Line
-                                2</label>
-                            <input type="text"
-                                class="input_ui w-full border-none outline-none bg-transparent  mt-3  font-normal text-xs leading-4 text-[#FFFFFF] placeholder:font-normal  placeholder:text-sm placeholder:leading-4 placeholder:text-[#FFFFFF]  transition-all duration-300"
-                                id="Address_Line_2" placeholder="Username">
+                            class="w-full relative h-[54px] border bg-[#16191D] flex flex-col rounded-xl  border-[#FFFFFF1A] px-4 ">
+                            <label for="AddressLine2" id="AddressLine2"
+                                class="absolute left-4 top-1/2 transition-all duration-300 transform -translate-y-1/2 text-[#FFFFFF80] cursor-text text-xs">Address
+                                Line 2</label>
+                            <input type="text" required id="AddressLine2"
+                                class="w-full h-full bg-transparent text-white outline-none"
+                                placeholder="Address Line 2">
                         </div>
                     </div>
                     <div class="relative">
-                        <div class="list_tooggle  mt-0 cursor-pointer w-full flex items-center justify-between bg-[#16191D] rounded-xl border border-[#FFFFFF1A] py-[17px] px-4">
+                        <div
+                            class="list_tooggle  mt-0 cursor-pointer w-full flex items-center justify-between bg-[#16191D] rounded-xl border border-[#FFFFFF1A] py-[17px] px-4">
                             <p class="country font-normal text-xs text-[#FFFFFF80]">Country</p>
                             <button type="button">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
@@ -331,7 +317,7 @@
                                 </svg>
                             </button>
                         </div>
-                        <div class="list_modal z-30 h-0 overflow-hidden max-h-[345px] transition-all duration-300 rounded-2xl absolute w-full  border border-transparent"
+                        <div class="list_modal z-30 h-0 overflow-hidden  max-h-[345px] transition-all duration-300 rounded-2xl absolute w-full  border border-transparent "
                             style="background-image: linear-gradient(168.66deg, #161B1F 11.58%, rgba(22, 27, 31, 0) 72.75%), linear-gradient(0deg, #0E0F11, #0E0F11);">
                             <div class="flex items-center justify-between py-3 px-4 border-b border-[#FFFFFF1A]">
                                 <input type="search"
@@ -349,108 +335,150 @@
                                     </svg>
                                 </button>
                             </div>
-                            <div class="">
-                                <ul>
-                                    <div class="">
-                                        <li
-                                            class="list_item cursor-pointer flex items-center justify-between  p-[12px] hover:bg-[#FFFFFF0D] mb-2">
-                                            <p class="list_text font-normal text-sm text-[#FFFFFF] leading-[10px]">
-                                                United States
-                                            </p>
-                                            <svg class="list_svg list_svg_ui" width="9" height="8" viewBox="0 0 9 8"
-                                                fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M1.25 4.75385L3.08862 7L8 1" stroke="white" stroke-width="1.5"
-                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
-                                        </li>
-                                        <div class="list_border_b  w-full h-[1px] bg-[#FFFFFF1A]"></div>
-                                    </div>
-                                    <div class="">
-                                        <li
-                                            class="list_item cursor-pointer flex items-center justify-between  p-[12px] hover:bg-[#FFFFFF0D] mb-2">
-                                            <p class="list_text font-normal text-sm text-[#FFFFFF] leading-[10px]">
-                                                United Kingdom
-                                            </p>
-                                            <svg class="list_svg list_svg_ui" width="9" height="8" viewBox="0 0 9 8"
-                                                fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M1.25 4.75385L3.08862 7L8 1" stroke="white" stroke-width="1.5"
-                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
-                                        </li>
-                                        <div class="list_border_b w-full h-[1px] bg-[#FFFFFF1A]"></div>
-                                    </div>
-                                    <div class="">
-                                        <li
-                                            class="list_item cursor-pointer flex items-center justify-between  p-[12px] hover:bg-[#FFFFFF0D] mb-2">
-                                            <p class="list_text font-normal text-sm text-[#FFFFFF] leading-[10px]">
-                                                Algeria</p>
-                                            <svg class="list_svg list_svg_ui" width="9" height="8" viewBox="0 0 9 8"
-                                                fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M1.25 4.75385L3.08862 7L8 1" stroke="white" stroke-width="1.5"
-                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
-                                        </li>
-                                        <div class="list_border_b w-full h-[1px] bg-[#FFFFFF1A]"></div>
-                                    </div>
-                                    <div class="">
-                                        <li
-                                            class="list_item cursor-pointer flex items-center justify-between  p-[12px] hover:bg-[#FFFFFF0D] mb-2">
-                                            <p class="list_text font-normal text-sm text-[#FFFFFF] leading-[10px]">
-                                                Angola</p>
-                                            <svg class="list_svg list_svg_ui" width="9" height="8" viewBox="0 0 9 8"
-                                                fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M1.25 4.75385L3.08862 7L8 1" stroke="white" stroke-width="1.5"
-                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
-                                        </li>
-                                        <div class="list_border_b w-full h-[1px] bg-[#FFFFFF1A]"></div>
-                                    </div>
-                                    <div class="">
-                                        <li
-                                            class="list_item cursor-pointer flex items-center justify-between  p-[12px] hover:bg-[#FFFFFF0D] mb-2">
-                                            <p class="list_text font-normal text-sm text-[#FFFFFF] leading-[10px]">Benin
-                                            </p>
-                                            <svg class="list_svg list_svg_ui" width="9" height="8" viewBox="0 0 9 8"
-                                                fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M1.25 4.75385L3.08862 7L8 1" stroke="white" stroke-width="1.5"
-                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
-                                        </li>
-                                        <div class="list_border_b w-full h-[1px] bg-[#FFFFFF1A]"></div>
-                                    </div>
-                                    <div class="">
-                                        <li
-                                            class="list_item cursor-pointer flex items-center justify-between  p-[12px] hover:bg-[#FFFFFF0D] mb-2">
-                                            <p class="list_text font-normal text-sm text-[#FFFFFF] leading-[10px]">
-                                                Botswana</p>
-                                            <svg class="list_svg list_svg_ui" width="9" height="8" viewBox="0 0 9 8"
-                                                fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M1.25 4.75385L3.08862 7L8 1" stroke="white" stroke-width="1.5"
-                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
-                                        </li>
-                                        <div class="list_border_b w-full h-[1px] bg-[#FFFFFF1A]"></div>
-                                    </div>
-                                    <div class="">
-                                        <li
-                                            class="list_item cursor-pointer flex items-center justify-between  p-[12px] hover:bg-[#FFFFFF0D] mb-2">
-                                            <p class="list_text font-normal text-sm text-[#FFFFFF] leading-[10px]">
-                                                Burkina</p>
-                                            <svg class="list_svg list_svg_ui" width="9" height="8" viewBox="0 0 9 8"
-                                                fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M1.25 4.75385L3.08862 7L8 1" stroke="white" stroke-width="1.5"
-                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
-                                        </li>
-                                        <div class="list_border_b w-full h-[1px] bg-[#FFFFFF1A]"></div>
-                                    </div>
-                                </ul>
+                            <div class="pr-[7px]">
+                                <div class="">
+                                    <ul
+                                        class="max-h-[345px] list_modal__list overscroll-y-auto custom-scrollbar pr-[7px] pb-14">
+                                        <div class="">
+                                            <li
+                                                class="list_item cursor-pointer flex items-center justify-between  p-[12px] hover:bg-[#FFFFFF0D] mb-2">
+                                                <p class="list_text font-normal text-sm text-[#FFFFFF] leading-[10px]">
+                                                    United States
+                                                </p>
+                                                <svg class="list_svg list_svg_ui" width="9" height="8" viewBox="0 0 9 8"
+                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M1.25 4.75385L3.08862 7L8 1" stroke="white"
+                                                        stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </li>
+                                            <div class="list_border_b  w-full h-[1px] bg-[#FFFFFF1A]"></div>
+                                        </div>
+                                        <div class="">
+                                            <li
+                                                class="list_item cursor-pointer flex items-center justify-between  p-[12px] hover:bg-[#FFFFFF0D] mb-2">
+                                                <p class="list_text font-normal text-sm text-[#FFFFFF] leading-[10px]">
+                                                    United States
+                                                </p>
+                                                <svg class="list_svg list_svg_ui" width="9" height="8" viewBox="0 0 9 8"
+                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M1.25 4.75385L3.08862 7L8 1" stroke="white"
+                                                        stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </li>
+                                            <div class="list_border_b  w-full h-[1px] bg-[#FFFFFF1A]"></div>
+                                        </div>
+                                        <div class="">
+                                            <li
+                                                class="list_item cursor-pointer flex items-center justify-between  p-[12px] hover:bg-[#FFFFFF0D] mb-2">
+                                                <p class="list_text font-normal text-sm text-[#FFFFFF] leading-[10px]">
+                                                    United States
+                                                </p>
+                                                <svg class="list_svg list_svg_ui" width="9" height="8" viewBox="0 0 9 8"
+                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M1.25 4.75385L3.08862 7L8 1" stroke="white"
+                                                        stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </li>
+                                            <div class="list_border_b  w-full h-[1px] bg-[#FFFFFF1A]"></div>
+                                        </div>
+                                        <div class="">
+                                            <li
+                                                class="list_item cursor-pointer flex items-center justify-between  p-[12px] hover:bg-[#FFFFFF0D] mb-2">
+                                                <p class="list_text font-normal text-sm text-[#FFFFFF] leading-[10px]">
+                                                    United Kingdom
+                                                </p>
+                                                <svg class="list_svg list_svg_ui" width="9" height="8" viewBox="0 0 9 8"
+                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M1.25 4.75385L3.08862 7L8 1" stroke="white"
+                                                        stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </li>
+                                            <div class="list_border_b w-full h-[1px] bg-[#FFFFFF1A]"></div>
+                                        </div>
+                                        <div class="">
+                                            <li
+                                                class="list_item cursor-pointer flex items-center justify-between  p-[12px] hover:bg-[#FFFFFF0D] mb-2">
+                                                <p class="list_text font-normal text-sm text-[#FFFFFF] leading-[10px]">
+                                                    Algeria</p>
+                                                <svg class="list_svg list_svg_ui" width="9" height="8" viewBox="0 0 9 8"
+                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M1.25 4.75385L3.08862 7L8 1" stroke="white"
+                                                        stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </li>
+                                            <div class="list_border_b w-full h-[1px] bg-[#FFFFFF1A]"></div>
+                                        </div>
+                                        <div class="">
+                                            <li
+                                                class="list_item cursor-pointer flex items-center justify-between  p-[12px] hover:bg-[#FFFFFF0D] mb-2">
+                                                <p class="list_text font-normal text-sm text-[#FFFFFF] leading-[10px]">
+                                                    Angola</p>
+                                                <svg class="list_svg list_svg_ui" width="9" height="8" viewBox="0 0 9 8"
+                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M1.25 4.75385L3.08862 7L8 1" stroke="white"
+                                                        stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </li>
+                                            <div class="list_border_b w-full h-[1px] bg-[#FFFFFF1A]"></div>
+                                        </div>
+                                        <div class="">
+                                            <li
+                                                class="list_item cursor-pointer flex items-center justify-between  p-[12px] hover:bg-[#FFFFFF0D] mb-2">
+                                                <p class="list_text font-normal text-sm text-[#FFFFFF] leading-[10px]">
+                                                    Benin
+                                                </p>
+                                                <svg class="list_svg list_svg_ui" width="9" height="8" viewBox="0 0 9 8"
+                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M1.25 4.75385L3.08862 7L8 1" stroke="white"
+                                                        stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </li>
+                                            <div class="list_border_b w-full h-[1px] bg-[#FFFFFF1A]"></div>
+                                        </div>
+                                        <div class="">
+                                            <li
+                                                class="list_item cursor-pointer flex items-center justify-between  p-[12px] hover:bg-[#FFFFFF0D] mb-2">
+                                                <p class="list_text font-normal text-sm text-[#FFFFFF] leading-[10px]">
+                                                    Botswana</p>
+                                                <svg class="list_svg list_svg_ui" width="9" height="8" viewBox="0 0 9 8"
+                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M1.25 4.75385L3.08862 7L8 1" stroke="white"
+                                                        stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </li>
+                                            <div class="list_border_b w-full h-[1px] bg-[#FFFFFF1A]"></div>
+                                        </div>
+                                        <div class="">
+                                            <li
+                                                class="list_item cursor-pointer flex items-center justify-between  p-[12px] hover:bg-[#FFFFFF0D] mb-2">
+                                                <p class="list_text font-normal text-sm text-[#FFFFFF] leading-[10px]">
+                                                    Burkina</p>
+                                                <svg class="list_svg list_svg_ui" width="9" height="8" viewBox="0 0 9 8"
+                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M1.25 4.75385L3.08862 7L8 1" stroke="white"
+                                                        stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </li>
+                                            <div class="list_border_b w-full h-[1px] bg-[#FFFFFF1A]"></div>
+                                        </div>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="flex items-center gap-3 w-full">
                         <div class="relative w-full max-w-[383px]">
-                            <div class="list_state_toogle_modal mt-0 cursor-pointer w-full flex items-center justify-between bg-[#16191D] rounded-xl border border-[#FFFFFF1A] py-[17px] px-4">
+                            <div
+                                class="list_state_toogle_modal mt-0 cursor-pointer w-full flex items-center justify-between bg-[#16191D] rounded-xl border border-[#FFFFFF1A] py-[17px] px-4">
                                 <p class="state font-normal text-xs text-[#FFFFFF80]">State</p>
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -460,7 +488,186 @@
                                         stroke-linejoin="round" />
                                 </svg>
                             </div>
-                            <div class="list_state_modal z-30 h-0 overflow-hidden max-h-[345px] transition-all duration-300 rounded-2xl absolute w-full  border border-transparent" style="background-image: linear-gradient(168.66deg, #161B1F 11.58%, rgba(22, 27, 31, 0) 72.75%), linear-gradient(0deg, #0E0F11, #0E0F11);">
+                            <div class="list_state_modal z-30 h-0 overflow-hidden max-h-[345px] transition-all duration-300 rounded-2xl absolute w-full  border border-transparent"
+                                style="background-image: linear-gradient(168.66deg, #161B1F 11.58%, rgba(22, 27, 31, 0) 72.75%), linear-gradient(0deg, #0E0F11, #0E0F11);">
+                                <div class="flex items-center justify-between py-3 px-4 border-b border-[#FFFFFF1A]">
+                                    <input type="search"
+                                        class="outline-none border-none text-[#FFFFFF] placeholder:text-[#FFFFFF80]  w-full bg-transparent plaplaceholder:font-normal placeholder:text-sm"
+                                        placeholder="Search" name="search" id="search">
+                                    <button class="">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.58341 17.4998C13.9557 17.4998 17.5001 13.9554 17.5001 9.58317C17.5001 5.21092 13.9557 1.6665 9.58341 1.6665C5.21116 1.6665 1.66675 5.21092 1.66675 9.58317C1.66675 13.9554 5.21116 17.4998 9.58341 17.4998Z"
+                                                stroke="white" stroke-width="1.2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path d="M18.3334 18.3332L16.6667 16.6665" stroke="white" stroke-width="1.2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="pr-7">
+                                    <div class="">
+                                        <ul class="max-h-[345px] list_state_modal__list overflow-y-auto custom-scrollbar pr-[7px]">
+                                            <div class="">
+                                                <li
+                                                    class="list_state_item cursor-pointer flex items-center justify-between  p-[12px] hover:bg-[#FFFFFF0D] mb-2">
+                                                    <p
+                                                        class="list_state_text font-normal text-sm text-[#FFFFFF] leading-[10px]">
+                                                        United States
+                                                    </p>
+                                                    <svg class="list_state_svg list_svg_ui" width="9" height="8"
+                                                        viewBox="0 0 9 8" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M1.25 4.75385L3.08862 7L8 1" stroke="white"
+                                                            stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                </li>
+                                                <div
+                                                    class="list_state_border_b list_border_b  w-full h-[1px] bg-[#FFFFFF1A]">
+                                                </div>
+                                            </div>
+                                            <div class="">
+                                                <li
+                                                    class="list_state_item cursor-pointer flex items-center justify-between  p-[12px] hover:bg-[#FFFFFF0D] mb-2">
+                                                    <p
+                                                        class="list_state_text font-normal text-sm text-[#FFFFFF] leading-[10px]">
+                                                        United Kingdom
+                                                    </p>
+                                                    <svg class="list_state_svg list_svg_ui" width="9" height="8"
+                                                        viewBox="0 0 9 8" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M1.25 4.75385L3.08862 7L8 1" stroke="white"
+                                                            stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                </li>
+                                                <div
+                                                    class="list_state_border_b list_border_b w-full h-[1px] bg-[#FFFFFF1A]">
+                                                </div>
+                                            </div>
+                                            <div class="">
+                                                <li
+                                                    class="list_state_item cursor-pointer flex items-center justify-between  p-[12px] hover:bg-[#FFFFFF0D] mb-2">
+                                                    <p
+                                                        class="list_state_text font-normal text-sm text-[#FFFFFF] leading-[10px]">
+                                                        Algeria</p>
+                                                    <svg class="list_state_svg list_svg_ui" width="9" height="8"
+                                                        viewBox="0 0 9 8" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M1.25 4.75385L3.08862 7L8 1" stroke="white"
+                                                            stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                </li>
+                                                <div
+                                                    class="list_state_border_b list_border_b w-full h-[1px] bg-[#FFFFFF1A]">
+                                                </div>
+                                            </div>
+                                            <div class="">
+                                                <li
+                                                    class="list_state_item cursor-pointer flex items-center justify-between  p-[12px] hover:bg-[#FFFFFF0D] mb-2">
+                                                    <p
+                                                        class="list_state_text font-normal text-sm text-[#FFFFFF] leading-[10px]">
+                                                        Angola</p>
+                                                    <svg class="list_state_svg list_svg_ui" width="9" height="8"
+                                                        viewBox="0 0 9 8" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M1.25 4.75385L3.08862 7L8 1" stroke="white"
+                                                            stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                </li>
+                                                <div
+                                                    class="list_state_border_b list_border_b w-full h-[1px] bg-[#FFFFFF1A]">
+                                                </div>
+                                            </div>
+                                            <div class="">
+                                                <li
+                                                    class="list_state_item cursor-pointer flex items-center justify-between  p-[12px] hover:bg-[#FFFFFF0D] mb-2">
+                                                    <p
+                                                        class="list_state_text font-normal text-sm text-[#FFFFFF] leading-[10px]">
+                                                        Benin
+                                                    </p>
+                                                    <svg class="list_state_svg list_svg_ui" width="9" height="8"
+                                                        viewBox="0 0 9 8" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M1.25 4.75385L3.08862 7L8 1" stroke="white"
+                                                            stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                </li>
+                                                <div
+                                                    class="list_state_border_b list_border_b w-full h-[1px] bg-[#FFFFFF1A]">
+                                                </div>
+                                            </div>
+                                            <div class="">
+                                                <li
+                                                    class="list_state_item cursor-pointer flex items-center justify-between  p-[12px] hover:bg-[#FFFFFF0D] mb-2">
+                                                    <p
+                                                        class="list_state_text font-normal text-sm text-[#FFFFFF] leading-[10px]">
+                                                        Botswana</p>
+                                                    <svg class="list_state_svg list_svg_ui" width="9" height="8"
+                                                        viewBox="0 0 9 8" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M1.25 4.75385L3.08862 7L8 1" stroke="white"
+                                                            stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                </li>
+                                                <div
+                                                    class="list_state_border_b list_border_b w-full h-[1px] bg-[#FFFFFF1A]">
+                                                </div>
+                                            </div>
+                                            <div class="">
+                                                <li
+                                                    class="list_state_item cursor-pointer flex items-center justify-between  p-[12px] hover:bg-[#FFFFFF0D] mb-2">
+                                                    <p
+                                                        class="list_state_text font-normal text-sm text-[#FFFFFF] leading-[10px]">
+                                                        Burkina</p>
+                                                    <svg class="list_state_svg list_svg_ui" width="9" height="8"
+                                                        viewBox="0 0 9 8" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M1.25 4.75385L3.08862 7L8 1" stroke="white"
+                                                            stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                </li>
+                                                <div
+                                                    class="list_state_border_b list_border_b w-full h-[1px] bg-[#FFFFFF1A]">
+                                                </div>
+                                            </div>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="w-full relative h-[54px] border bg-[#16191D] flex flex-col rounded-xl  border-[#FFFFFF1A] px-4 ">
+                            <label for="Postalcode" id="Postalcode"
+                                class="absolute left-4 top-1/2 transition-all duration-300 transform -translate-y-1/2 text-[#FFFFFF80] cursor-text text-xs">Postal
+                                code</label>
+                            <input type="text" required id="Postalcode"
+                                class="w-full h-full bg-transparent text-white outline-none " placeholder="Postal code">
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div
+                            class="list_city_toogle_modal cursor-pointer flex items-center justify-between bg-[#16191D] rounded-xl border border-[#FFFFFF1A] py-[17px] px-4">
+                            <p class="city font-normal text-xs text-[#FFFFFF80]">City</p>
+                            <button type="button">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.5994 7.4585L11.1661 12.8918C10.5244 13.5335 9.47441 13.5335 8.83275 12.8918L3.39941 7.4585"
+                                        stroke="white" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="list_city_modal z-30 h-0 overflow-hidden max-h-[345px] transition-all duration-300 rounded-2xl absolute w-full  border border-transparent"
+                            style="background-image: linear-gradient(168.66deg, #161B1F 11.58%, rgba(22, 27, 31, 0) 72.75%), linear-gradient(0deg, #0E0F11, #0E0F11);">
                             <div class="flex items-center justify-between py-3 px-4 border-b border-[#FFFFFF1A]">
                                 <input type="search"
                                     class="outline-none border-none text-[#FFFFFF] placeholder:text-[#FFFFFF80]  w-full bg-transparent plaplaceholder:font-normal placeholder:text-sm"
@@ -478,152 +685,189 @@
                                 </button>
                             </div>
                             <div class="">
-                                <ul>
+                                <ul class="max-h-[345px] list_city_modal__list overscroll-y-auto custom-scrollbar pr-[7px] pb-14">
                                     <div class="">
                                         <li
-                                            class="list_state_item cursor-pointer flex items-center justify-between  p-[12px] hover:bg-[#FFFFFF0D] mb-2">
-                                            <p class="list_state_text font-normal text-sm text-[#FFFFFF] leading-[10px]">
+                                            class="list_city_item cursor-pointer flex items-center justify-between  p-[12px] hover:bg-[#FFFFFF0D] mb-2">
+                                            <p class="list_city_text font-normal text-sm text-[#FFFFFF] leading-[10px]">
                                                 United States
                                             </p>
-                                            <svg class="list_state_svg list_svg_ui" width="9" height="8" viewBox="0 0 9 8"
-                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg class="list_city_svg list_svg_ui" width="9" height="8"
+                                                viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M1.25 4.75385L3.08862 7L8 1" stroke="white" stroke-width="1.5"
                                                     stroke-linecap="round" stroke-linejoin="round" />
                                             </svg>
                                         </li>
-                                        <div class="list_state_border_b list_border_b  w-full h-[1px] bg-[#FFFFFF1A]"></div>
+                                        <div class="list_city_border_b list_border_b  w-full h-[1px] bg-[#FFFFFF1A]">
+                                        </div>
                                     </div>
                                     <div class="">
                                         <li
-                                            class="list_state_item cursor-pointer flex items-center justify-between  p-[12px] hover:bg-[#FFFFFF0D] mb-2">
-                                            <p class="list_state_text font-normal text-sm text-[#FFFFFF] leading-[10px]">
+                                            class="list_city_item cursor-pointer flex items-center justify-between  p-[12px] hover:bg-[#FFFFFF0D] mb-2">
+                                            <p class="list_city_text font-normal text-sm text-[#FFFFFF] leading-[10px]">
                                                 United Kingdom
                                             </p>
-                                            <svg class="list_state_svg list_svg_ui" width="9" height="8" viewBox="0 0 9 8"
-                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg class="list_city_svg list_svg_ui" width="9" height="8"
+                                                viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M1.25 4.75385L3.08862 7L8 1" stroke="white" stroke-width="1.5"
                                                     stroke-linecap="round" stroke-linejoin="round" />
                                             </svg>
                                         </li>
-                                        <div class="list_state_border_b list_border_b w-full h-[1px] bg-[#FFFFFF1A]"></div>
+                                        <div class="list_city_border_b list_border_b w-full h-[1px] bg-[#FFFFFF1A]">
+                                        </div>
                                     </div>
                                     <div class="">
                                         <li
-                                            class="list_state_item cursor-pointer flex items-center justify-between  p-[12px] hover:bg-[#FFFFFF0D] mb-2">
-                                            <p class="list_state_text font-normal text-sm text-[#FFFFFF] leading-[10px]">
+                                            class="list_city_item cursor-pointer flex items-center justify-between  p-[12px] hover:bg-[#FFFFFF0D] mb-2">
+                                            <p class="list_city_text font-normal text-sm text-[#FFFFFF] leading-[10px]">
                                                 Algeria</p>
-                                            <svg class="list_state_svg list_svg_ui" width="9" height="8" viewBox="0 0 9 8"
-                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg class="list_city_svg list_svg_ui" width="9" height="8"
+                                                viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M1.25 4.75385L3.08862 7L8 1" stroke="white" stroke-width="1.5"
                                                     stroke-linecap="round" stroke-linejoin="round" />
                                             </svg>
                                         </li>
-                                        <div class="list_state_border_b list_border_b w-full h-[1px] bg-[#FFFFFF1A]"></div>
+                                        <div class="list_city_border_b list_border_b w-full h-[1px] bg-[#FFFFFF1A]">
+                                        </div>
                                     </div>
                                     <div class="">
                                         <li
-                                            class="list_state_item cursor-pointer flex items-center justify-between  p-[12px] hover:bg-[#FFFFFF0D] mb-2">
-                                            <p class="list_state_text font-normal text-sm text-[#FFFFFF] leading-[10px]">
+                                            class="list_city_item cursor-pointer flex items-center justify-between  p-[12px] hover:bg-[#FFFFFF0D] mb-2">
+                                            <p class="list_city_text font-normal text-sm text-[#FFFFFF] leading-[10px]">
                                                 Angola</p>
-                                            <svg class="list_state_svg list_svg_ui" width="9" height="8" viewBox="0 0 9 8"
-                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg class="list_city_svg list_svg_ui" width="9" height="8"
+                                                viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M1.25 4.75385L3.08862 7L8 1" stroke="white" stroke-width="1.5"
                                                     stroke-linecap="round" stroke-linejoin="round" />
                                             </svg>
                                         </li>
-                                        <div class="list_state_border_b list_border_b w-full h-[1px] bg-[#FFFFFF1A]"></div>
+                                        <div class="list_city_border_b list_border_b w-full h-[1px] bg-[#FFFFFF1A]">
+                                        </div>
                                     </div>
                                     <div class="">
                                         <li
-                                            class="list_state_item cursor-pointer flex items-center justify-between  p-[12px] hover:bg-[#FFFFFF0D] mb-2">
-                                            <p class="list_state_text font-normal text-sm text-[#FFFFFF] leading-[10px]">Benin
+                                            class="list_city_item cursor-pointer flex items-center justify-between  p-[12px] hover:bg-[#FFFFFF0D] mb-2">
+                                            <p class="list_city_text font-normal text-sm text-[#FFFFFF] leading-[10px]">
+                                                Benin
                                             </p>
-                                            <svg class="list_state_svg list_svg_ui" width="9" height="8" viewBox="0 0 9 8"
-                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg class="list_city_svg list_svg_ui" width="9" height="8"
+                                                viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M1.25 4.75385L3.08862 7L8 1" stroke="white" stroke-width="1.5"
                                                     stroke-linecap="round" stroke-linejoin="round" />
                                             </svg>
                                         </li>
-                                        <div class="list_state_border_b list_border_b w-full h-[1px] bg-[#FFFFFF1A]"></div>
+                                        <div class="list_city_border_b list_border_b w-full h-[1px] bg-[#FFFFFF1A]">
+                                        </div>
                                     </div>
                                     <div class="">
                                         <li
-                                            class="list_state_item cursor-pointer flex items-center justify-between  p-[12px] hover:bg-[#FFFFFF0D] mb-2">
-                                            <p class="list_state_text font-normal text-sm text-[#FFFFFF] leading-[10px]">
+                                            class="list_city_item cursor-pointer flex items-center justify-between  p-[12px] hover:bg-[#FFFFFF0D] mb-2">
+                                            <p class="list_city_text font-normal text-sm text-[#FFFFFF] leading-[10px]">
                                                 Botswana</p>
-                                            <svg class="list_state_svg list_svg_ui" width="9" height="8" viewBox="0 0 9 8"
-                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg class="list_city_svg list_svg_ui" width="9" height="8"
+                                                viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M1.25 4.75385L3.08862 7L8 1" stroke="white" stroke-width="1.5"
                                                     stroke-linecap="round" stroke-linejoin="round" />
                                             </svg>
                                         </li>
-                                        <div class="list_state_border_b list_border_b w-full h-[1px] bg-[#FFFFFF1A]"></div>
+                                        <div class="list_city_border_b list_border_b w-full h-[1px] bg-[#FFFFFF1A]">
+                                        </div>
                                     </div>
                                     <div class="">
                                         <li
-                                            class="list_state_item cursor-pointer flex items-center justify-between  p-[12px] hover:bg-[#FFFFFF0D] mb-2">
-                                            <p class="list_state_text font-normal text-sm text-[#FFFFFF] leading-[10px]">
+                                            class="list_city_item cursor-pointer flex items-center justify-between  p-[12px] hover:bg-[#FFFFFF0D] mb-2">
+                                            <p class="list_city_text font-normal text-sm text-[#FFFFFF] leading-[10px]">
                                                 Burkina</p>
-                                            <svg class="list_state_svg list_svg_ui" width="9" height="8" viewBox="0 0 9 8"
-                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg class="list_city_svg list_svg_ui" width="9" height="8"
+                                                viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M1.25 4.75385L3.08862 7L8 1" stroke="white" stroke-width="1.5"
                                                     stroke-linecap="round" stroke-linejoin="round" />
                                             </svg>
                                         </li>
-                                        <div class="list_state_border_b list_border_b w-full h-[1px] bg-[#FFFFFF1A]"></div>
+                                        <div class="list_city_border_b list_border_b w-full h-[1px] bg-[#FFFFFF1A]">
+                                        </div>
                                     </div>
                                 </ul>
                             </div>
                         </div>
-                        </div>
-                        <div class="inp_box   items-center  transition-all duration-300 bg-[#16191D] flex flex-col rounded-xl border border-[#FFFFFF1A] py-[12px] px-4">
-                            <label for="Postal_code"
-                                class="label_inp w-full leading-[8px] font-normal text-xs text-[#FFFFFF80]">Postal
-                                code</label>
-                            <input type="text"
-                                class="input_ui w-full border-none outline-none bg-transparent  mt-3  font-normal text-xs leading-4 text-[#FFFFFF] placeholder:font-normal  placeholder:text-sm placeholder:leading-4 placeholder:text-[#FFFFFF]  transition-all duration-300"
-                                id="firstname" placeholder="Username">
-                        </div>
-                    </div>
-                    <div  class="cursor-pointer flex items-center justify-between bg-[#16191D] rounded-xl border border-[#FFFFFF1A] py-[17px] px-4">
-                        <p class="font-normal text-xs text-[#FFFFFF80]">City</p>
-                        <button type="button">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M16.5994 7.4585L11.1661 12.8918C10.5244 13.5335 9.47441 13.5335 8.83275 12.8918L3.39941 7.4585"
-                                    stroke="white" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                        </button>
                     </div>
                     <div class="flex gap-3 mb-8">
-                        <div
-                            class="flex items-center gap-2 border border-[#FFFFFF1A] rounded-xl bg-[#16191D] px-4 py-[15px]">
-                            <div class="w-6 overflow-hidden rounded-full">
-                                <img src="./img/uk.png" alt="uk" class="w-full object-cover">
+                        <div class="relative">
+                            <div
+                                class="number_open cursor-pointer flex items-center gap-2 border border-[#FFFFFF1A] rounded-xl bg-[#16191D] px-4 py-[15px]">
+                                <div class="w-6 overflow-hidden rounded-full">
+                                    <img src="./img/uk.png" alt="uk" class="w-full object-cover">
+                                </div>
+                                <p class="font-normal text-sm leading-[10px] text-[#FFFFFF]">+44</p>
+                                <button type="button">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M16.5994 7.4585L11.1661 12.8918C10.5244 13.5335 9.47441 13.5335 8.83275 12.8918L3.39941 7.4585"
+                                            stroke="white" stroke-width="1.2" stroke-miterlimit="10"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
                             </div>
-                            <p class="font-normal text-sm leading-[10px] text-[#FFFFFF]">+44</p>
-                            <button type="button">
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M16.5994 7.4585L11.1661 12.8918C10.5244 13.5335 9.47441 13.5335 8.83275 12.8918L3.39941 7.4585"
-                                        stroke="white" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
-                            </button>
+                            <div class="number_modal z-30 pr-[7px] h-0 overflow-hidden  max-h-[345px] transition-all duration-300 rounded-2xl absolute w-full  border border-transparent" style="background-image: linear-gradient(168.66deg, #161B1F 11.58%, rgba(22, 27, 31, 0) 72.75%), linear-gradient(0deg, #0E0F11, #0E0F11);">
+                                <div class="flex flex-col gap-2.5 p-2.5 max-h-[145px] list_number_modal__list  overscroll-y-auto custom-scrollbar pr-[7px] pb-14">
+                                    <div class="flex items-center gap-2 w-full">
+                                        <div class="w-6 overflow-hidden rounded-full">
+                                            <img src="./img/uk.png" alt="uk" class="w-full object-cover">
+                                        </div>
+                                        <p class="font-normal text-sm leading-[10px] text-[#FFFFFF]">+44</p>
+                                    </div>
+                                    <div class="flex items-center gap-2 w-full">
+                                        <div class="w-6 overflow-hidden rounded-full">
+                                            <img src="./img/uk.png" alt="uk" class="w-full object-cover">
+                                        </div>
+                                        <p class="font-normal text-sm leading-[10px] text-[#FFFFFF]">+44</p>
+                                    </div>
+                                    <div class="flex items-center gap-2 w-full">
+                                        <div class="w-6 overflow-hidden rounded-full">
+                                            <img src="./img/uk.png" alt="uk" class="w-full object-cover">
+                                        </div>
+                                        <p class="font-normal text-sm leading-[10px] text-[#FFFFFF]">+44</p>
+                                    </div>
+                                    <div class="flex items-center gap-2 w-full">
+                                        <div class="w-6 overflow-hidden rounded-full">
+                                            <img src="./img/uk.png" alt="uk" class="w-full object-cover">
+                                        </div>
+                                        <p class="font-normal text-sm leading-[10px] text-[#FFFFFF]">+44</p>
+                                    </div>
+                                    <div class="flex items-center gap-2 w-full">
+                                        <div class="w-6 overflow-hidden rounded-full">
+                                            <img src="./img/uk.png" alt="uk" class="w-full object-cover">
+                                        </div>
+                                        <p class="font-normal text-sm leading-[10px] text-[#FFFFFF]">+44</p>
+                                    </div>
+                                    <div class="flex items-center gap-2 w-full">
+                                        <div class="w-6 overflow-hidden rounded-full">
+                                            <img src="./img/uk.png" alt="uk" class="w-full object-cover">
+                                        </div>
+                                        <p class="font-normal text-sm leading-[10px] text-[#FFFFFF]">+44</p>
+                                    </div>
+                                    <div class="flex items-center gap-2 w-full">
+                                        <div class="w-6 overflow-hidden rounded-full">
+                                            <img src="./img/uk.png" alt="uk" class="w-full object-cover">
+                                        </div>
+                                        <p class="font-normal text-sm leading-[10px] text-[#FFFFFF]">+44</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div
-                            class="w-full transition-all duration-300 bg-[#16191D] flex flex-col rounded-xl border border-[#FFFFFF1A] py-[22px] px-4">
-
-                            <input type="text"
-                                class=" border-none  outline-none bg-transparent  font-normal text-sm leading-[10px] text-[#FFFFFF] placeholder:font-normal placeholder:text-sm placeholder:leading-[10px] placeholder:text-[#FFFFFF80]  transition-all duration-300"
-                                id="firstname" placeholder="00 000 00 00">
+                            class="w-full relative h-[54px] border bg-[#16191D] flex flex-col rounded-xl  border-[#FFFFFF1A] px-4 ">
+                            <label for="number" id="number"
+                                class="absolute left-4 top-1/2 transition-all duration-300 transform -translate-y-1/2 text-[#FFFFFF80] cursor-text text-xs">00
+                                000 00 00</label>
+                            <input type="text" required id="number"
+                                class="w-full h-full bg-transparent text-white outline-none "
+                                placeholder="00 000 00 00">
                         </div>
                     </div>
                     <div class="flex items-center gap-2 mb-12">
-                        <input type="checkbox" name="checkbox" id="checkbox" class="custom-checkbox ">
+                        <input type="checkbox" name="checkbox" id="checkbox" class="custom-checkbox mt-0">
                         <label for="checkbox" class="font-normal text-sm text-[#FFFFFF] leading-4">I confirm that my
                             name is
                             correct and matches my government issued ID</label>

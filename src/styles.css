@@ -22,3 +22,23 @@
 .list_border_b_active{
     display: block;
 }
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 4px; /* Skrollning kengligi */
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #4A5568; /* Skrollning rangi */
+    max-width: 4px !important;
+    border-radius: 4px;
+    height: 4px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background-color: transparent; /* Skroll trekining rangi */
+  }
+  
+
+  .transparent-placeholder::placeholder {
+    color: transparent
+}
