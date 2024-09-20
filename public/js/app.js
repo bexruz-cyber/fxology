@@ -9,7 +9,7 @@ inp_box.forEach(function(item, index) {
         input_ui[index].classList.toggle("h-0");
         input_ui[index].classList.toggle("h-2.5");
         input_ui[index].classList.toggle("mt-3");
-        
+        input_ui[index].focus();
     });
 });
 
