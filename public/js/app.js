@@ -1,14 +1,25 @@
-let inp_box = document.querySelectorAll(".inp_box");
-let label_inp = document.querySelectorAll(".label_inp");
-let input_ui = document.querySelectorAll(".input_ui");
+let list_item = document.querySelectorAll(".list_item")
+let list_border_b = document.querySelectorAll(".list_border_b")
+let list_svg = document.querySelectorAll(".list_svg")
+let list_text = document.querySelectorAll(".list_text")
+let search = document.querySelector("#search")
+let list_tooggle = document.querySelector(".list_tooggle")
+let list_modal = document.querySelector(".list_modal")
 
-inp_box.forEach(function(item, index) {
-    item.addEventListener("click", function() {
-        item.classList.toggle("py-[22px]");
-        item.classList.toggle("py-[12px]");
-        input_ui[index].classList.toggle("h-0");
-        input_ui[index].classList.toggle("h-2.5");
-        input_ui[index].classList.toggle("mt-3");
-        input_ui[index].focus();
-    });
-});
+
+list_tooggle.addEventListener("click", function(){
+    list_modal.classList.toggle("list_modal_active")
+})
+list_item.forEach(function(item , index){
+    item.addEventListener("click" , function(){
+        list_item.forEach(function(item){
+            item.classList.remove("list_item_active")
+        })
+        list_svg.forEach(function(item){
+            item.classList.remove("list_svg_active")
+        })
+        search.value = list_text[index].textContent
+        list_svg[index].classList.toggle("list_svg_active")
+        list_item[index].classList.toggle("list_item_active")
+    })
+})

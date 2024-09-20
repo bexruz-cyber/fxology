@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.list_border_b{
+    display: none;
+}
+.list_svg_ui{
+    display: none;
+}
+
+.list_item:hover .list_border_b {
+    display: block;
+}
+
+.list_item:hover .list_svg_ui {
+    display: block;
+}
+
+.list_item_active{
+    background-color: #FFFFFF0D;
+}
+.list_svg_active{
+    display: block;
+}
