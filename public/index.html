@@ -508,7 +508,8 @@
                                 </div>
                                 <div class="pr-7">
                                     <div class="">
-                                        <ul class="max-h-[345px] list_state_modal__list overflow-y-auto custom-scrollbar pr-[7px]">
+                                        <ul
+                                            class="max-h-[345px] list_state_modal__list overflow-y-auto custom-scrollbar pr-[7px]">
                                             <div class="">
                                                 <li
                                                     class="list_state_item cursor-pointer flex items-center justify-between  p-[12px] hover:bg-[#FFFFFF0D] mb-2">
@@ -685,7 +686,8 @@
                                 </button>
                             </div>
                             <div class="">
-                                <ul class="max-h-[345px] list_city_modal__list overscroll-y-auto custom-scrollbar pr-[7px] pb-14">
+                                <ul
+                                    class="max-h-[345px] list_city_modal__list overscroll-y-auto custom-scrollbar pr-[7px] pb-14">
                                     <div class="">
                                         <li
                                             class="list_city_item cursor-pointer flex items-center justify-between  p-[12px] hover:bg-[#FFFFFF0D] mb-2">
@@ -809,8 +811,10 @@
                                     </svg>
                                 </button>
                             </div>
-                            <div class="number_modal z-30 pr-[7px] h-0 overflow-hidden  max-h-[345px] transition-all duration-300 rounded-2xl absolute w-full  border border-transparent" style="background-image: linear-gradient(168.66deg, #161B1F 11.58%, rgba(22, 27, 31, 0) 72.75%), linear-gradient(0deg, #0E0F11, #0E0F11);">
-                                <div class="flex flex-col gap-2.5 p-2.5 max-h-[145px] list_number_modal__list  overscroll-y-auto custom-scrollbar pr-[7px] pb-14">
+                            <div class="number_modal max-h-[145px] z-30 pr-[7px] h-0 overflow-hidden   transition-all duration-300 rounded-2xl absolute w-full  border border-transparent"
+                                style="background-image: linear-gradient(168.66deg, #161B1F 11.58%, rgba(22, 27, 31, 0) 72.75%), linear-gradient(0deg, #0E0F11, #0E0F11);">
+                                <div
+                                    class="flex flex-col gap-2.5 p-2.5 max-h-[145px] list_number_modal__list  overscroll-y-auto custom-scrollbar pr-[7px] pb-14">
                                     <div class="flex items-center gap-2 w-full">
                                         <div class="w-6 overflow-hidden rounded-full">
                                             <img src="./img/uk.png" alt="uk" class="w-full object-cover">
@@ -856,14 +860,19 @@
                                 </div>
                             </div>
                         </div>
-                        <div
-                            class="w-full relative h-[54px] border bg-[#16191D] flex flex-col rounded-xl  border-[#FFFFFF1A] px-4 ">
-                            <label for="number" id="number"
-                                class="absolute left-4 top-1/2 transition-all duration-300 transform -translate-y-1/2 text-[#FFFFFF80] cursor-text text-xs">00
-                                000 00 00</label>
-                            <input type="text" required id="number"
-                                class="w-full h-full bg-transparent text-white outline-none "
-                                placeholder="00 000 00 00">
+                        <!-- invalid_border  numberga natogri malumot kiritilganda shu classni qoyish kerak -->
+                        <div class="w-full">
+                            <div
+                                class="w-full relative h-[54px] invalid_border border bg-[#16191D] flex flex-col rounded-xl  border-[#FFFFFF1A] px-4 ">
+                                <label for="number" id="number"
+                                    class="absolute left-4 top-1/2 transition-all duration-300 transform -translate-y-1/2 text-[#FFFFFF80] cursor-text text-xs">00
+                                    000 00 00</label>
+                                <input type="text" required id="number"
+                                    class="w-full h-full bg-transparent text-white outline-none "
+                                    placeholder="00 000 00 00">
+
+                            </div>
+                            <span class="font-normal text-xs text-[#FFFBA1] pl-3">Incorrect phone number entered</span>
                         </div>
                     </div>
                     <div class="flex items-center gap-2 mb-12">

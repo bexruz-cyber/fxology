@@ -42,3 +42,6 @@
   .transparent-placeholder::placeholder {
     color: transparent
 }
+.invalid_border{
+    border: 1px solid  #FFFBA1;
+}
