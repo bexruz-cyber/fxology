@@ -1,4 +1,3 @@
-
 function inputs() {
     const inputs = document.querySelectorAll("input");
     inputs.forEach(function (item) {
@@ -69,8 +68,3 @@ function inputs() {
     });
   }
   inputs();
-  
-  
- 
-
-  
