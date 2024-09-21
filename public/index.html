@@ -271,7 +271,7 @@
                             class="w-full relative h-[54px] border bg-[#16191D] flex flex-col rounded-xl  border-[#FFFFFF1A] px-4 ">
                             <label for="username" id="username-label"
                                 class="absolute left-4 top-1/2 transition-all duration-300 transform -translate-y-1/2 text-[#FFFFFF80] cursor-text text-xs">Username</label>
-                            <input type="text" required id="username"
+                            <input autocomplete="off" type="text" required id="username"
                                 class="w-full h-full bg-transparent text-white outline-none" placeholder="Username">
                         </div>
                         <div
@@ -279,7 +279,7 @@
                             <label for="username" id="lastname-label"
                                 class="absolute left-4 top-1/2 transition-all duration-300 transform -translate-y-1/2 text-[#FFFFFF80] cursor-text text-xs">Last
                                 name</label>
-                            <input type="text" required id="lastname-label"
+                            <input autocomplete="off" type="text" required id="lastname-label"
                                 class="w-full h-full bg-transparent text-white outline-none" placeholder="Last name">
                         </div>
                     </div>
@@ -289,7 +289,7 @@
                             <label for="username" id="AddressLine1"
                                 class="absolute left-4 top-1/2 transition-all duration-300 transform -translate-y-1/2 text-[#FFFFFF80] cursor-text text-xs">Address
                                 Line 1</label>
-                            <input type="text" required id="AddressLine1"
+                            <input autocomplete="off" type="text" required id="AddressLine1"
                                 class="w-full h-full bg-transparent text-white outline-none"
                                 placeholder="Address Line 1">
                         </div>
@@ -298,7 +298,7 @@
                             <label for="AddressLine2" id="AddressLine2"
                                 class="absolute left-4 top-1/2 transition-all duration-300 transform -translate-y-1/2 text-[#FFFFFF80] cursor-text text-xs">Address
                                 Line 2</label>
-                            <input type="text" required id="AddressLine2"
+                            <input autocomplete="off" type="text" required id="AddressLine2"
                                 class="w-full h-full bg-transparent text-white outline-none"
                                 placeholder="Address Line 2">
                         </div>
@@ -320,7 +320,7 @@
                         <div class="list_modal z-30 h-0 overflow-hidden  max-h-[345px] transition-all duration-300 rounded-2xl absolute w-full  border border-transparent "
                             style="background-image: linear-gradient(168.66deg, #161B1F 11.58%, rgba(22, 27, 31, 0) 72.75%), linear-gradient(0deg, #0E0F11, #0E0F11);">
                             <div class="flex items-center justify-between py-3 px-4 border-b border-[#FFFFFF1A]">
-                                <input type="search"
+                                <input autocomplete="off" type="search"
                                     class="outline-none text-left border-none text-[#FFFFFF] placeholder:text-[#FFFFFF80]  w-full bg-transparent plaplaceholder:font-normal placeholder:text-sm"
                                     placeholder="Search" name="search" id="search">
                                 <button class="">
@@ -491,7 +491,7 @@
                             <div class="list_state_modal z-30 h-0 overflow-hidden max-h-[345px] transition-all duration-300 rounded-2xl absolute w-full  border border-transparent"
                                 style="background-image: linear-gradient(168.66deg, #161B1F 11.58%, rgba(22, 27, 31, 0) 72.75%), linear-gradient(0deg, #0E0F11, #0E0F11);">
                                 <div class="flex items-center justify-between py-3 px-4 border-b border-[#FFFFFF1A]">
-                                    <input type="search"
+                                    <input autocomplete="off" type="search"
                                         class="outline-none border-none text-[#FFFFFF] placeholder:text-[#FFFFFF80]  w-full bg-transparent plaplaceholder:font-normal placeholder:text-sm"
                                         placeholder="Search" name="search" id="search">
                                     <button class="">
@@ -649,7 +649,7 @@
                             <label for="Postalcode" id="Postalcode"
                                 class="absolute left-4 top-1/2 transition-all duration-300 transform -translate-y-1/2 text-[#FFFFFF80] cursor-text text-xs">Postal
                                 code</label>
-                            <input type="text" required id="Postalcode"
+                            <input autocomplete="off" type="text" required id="Postalcode"
                                 class="w-full h-full bg-transparent text-white outline-none " placeholder="Postal code">
                         </div>
                     </div>
@@ -670,7 +670,7 @@
                         <div class="list_city_modal z-30 h-0 overflow-hidden max-h-[300px] transition-all duration-300 rounded-2xl absolute w-full  border border-transparent"
                             style="background-image: linear-gradient(168.66deg, #161B1F 11.58%, rgba(22, 27, 31, 0) 72.75%), linear-gradient(0deg, #0E0F11, #0E0F11);">
                             <div class="flex items-center justify-between py-3 px-4 border-b border-[#FFFFFF1A]">
-                                <input type="search"
+                                <input autocomplete="off" type="search"
                                     class="outline-none border-none text-[#FFFFFF] placeholder:text-[#FFFFFF80]  w-full bg-transparent plaplaceholder:font-normal placeholder:text-sm"
                                     placeholder="Search" name="search" id="search">
                                 <button class="">
@@ -863,28 +863,23 @@
                         <!-- invalid_border  numberga natogri malumot kiritilganda shu classni qoyish kerak -->
                         <div class="w-full">
                             <div
-                                class="w-full relative h-[54px] invalid_border border bg-[#16191D] flex flex-col rounded-xl  border-[#FFFFFF1A] px-4 ">
+                                class="w-full relative h-[54px] border bg-[#16191D] flex flex-col rounded-xl  border-[#FFFFFF1A] px-4 ">
                                 <label for="number" id="number"
                                     class="absolute left-4 top-1/2 transition-all duration-300 transform -translate-y-1/2 text-[#FFFFFF80] cursor-text text-xs">00
                                     000 00 00</label>
-                                <input type="text" required id="number"
+                                <input autocomplete="off" type="text" required id="number"
                                     class="w-full h-full bg-transparent text-white outline-none "
                                     placeholder="00 000 00 00">
 
                             </div>
-                            <span class="hidden font-normal text-xs text-[#FFFBA1] pl-3 mt-[7px]">Incorrect phone number entered</span>
+                            <span class="hidden font-normal text-xs text-[#FFFBA1] pl-3 mt-[7px]">Incorrect phone number
+                                entered</span>
                         </div>
-                    </div>
-                    <div class="flex items-center gap-2 mb-12">
-                        <input type="checkbox" name="checkbox" id="checkbox" class="custom-checkbox mt-0">
-                        <label for="checkbox" class="cursor-pointer font-normal text-sm text-[#FFFFFF] leading-4">I confirm that my
-                            name is
-                            correct and matches my government issued ID</label>
                     </div>
                     <button type="submit"
                         class="bg-[#FFFFFF] max-w-[108px] w-full flex items-center gap-4 pr-1 pl-5 py-1 rounded-xl"
                         style="box-shadow: 0px 0px 20px 0px #FFFFFF80;">
-                        <p class="">
+                        <p class="font-semibold text-sm leading-[10px]">
                             Next
                         </p>
                         <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -910,6 +905,7 @@
                 <div class="absolute bottom-0 right-0 ">
                     <img src="./img/gridbg.png" alt="">
                 </div>
+
             </div>
         </div>
     </section>

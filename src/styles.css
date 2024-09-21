@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 
+*{
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+}
+
 .list_border_b{
     display: none;
 }
@@ -43,5 +49,6 @@
     color: transparent
 }
 .invalid_border{
-    border: 1px solid  #FFFBA1;
+    border: 1px solid  #FFFBA1 !important;
+    margin-bottom: 7px !important;
 }
