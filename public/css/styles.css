@@ -1141,6 +1141,9 @@ video {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+.text-\[\] {
+  color: ;
+}
 .underline {
   text-decoration-line: underline;
 }
@@ -1392,5 +1395,14 @@ video {
 
   .lg\:pl-\[84px\] {
     padding-left: 84px;
+  }
+
+  .lg\:text-\[32px\] {
+    font-size: 32px;
+  }
+
+  .lg\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 }
