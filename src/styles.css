@@ -52,3 +52,9 @@
     border: 1px solid  #FFFBA1 !important;
     margin-bottom: 7px !important;
 }
+
+@media (max-width: 445px) {
+    .google {
+        flex-direction: column;
+    }
+}
