@@ -1272,6 +1272,15 @@ video {
   .max-lg\:hidden {
     display: none;
   }
+
+  .max-lg\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .max-lg\:pb-4 {
+    padding-bottom: 1rem;
+  }
 }
 
 @media not all and (min-width: 768px) {
