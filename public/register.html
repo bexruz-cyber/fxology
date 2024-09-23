@@ -8,6 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Sign in</title>
 </head>
+
 <style>
     .custom-checkbox {
         -webkit-appearance: none;
@@ -32,6 +33,10 @@
 
     .custom-checkbox:checked::after {
         content: url(./img/Vector.svg);
+    }
+    @font-face {
+        font-family: ppMori;
+        src: url(./fonts/ppmori-regular.otf);
     }
 </style>
 
@@ -78,7 +83,7 @@
                     </svg>
                 </a>
                 <div class="">
-                    <h2 class="max-w-[175px] text-white font-normal text-lg mb-[29px] leading-[35px]">Create your
+                    <h2 class="font-[ppMori] max-w-[175px] text-white font-normal text-lg mb-[29px] leading-[17.5px]">Create your
                         account in a few
                         clicks</h2>
                     <div class="max-w-[191px] flex gap-[18px] items-center mb-[43px]">
@@ -182,12 +187,12 @@
                     </div>
                 </div>
                 <div class="flex items-center ">
-                    <a href="#" class="font-normal text-xs text-[#FFFFFF80] mr-auto">Copyright © FXology 2024</a>
-                    <a href="#" class="font-normal text-xs text-[#FFFFFF] underline mr-2">Terms & Conditions </a>
-                    <a href="#" class="font-normal text-xs text-[#FFFFFF] underline">Privacy Policy</a>
+                    <a href="#" class="font-normal text-xs text-[#FFFFFF80] mr-auto leading-[8px]">Copyright © FXology 2024</a>
+                    <a href="#" class="font-normal text-xs text-[#FFFFFF] underline mr-2 leading-[8px]">Terms & Conditions </a>
+                    <a href="#" class="font-normal text-xs text-[#FFFFFF] underline leading-[8px]">Privacy Policy</a>
                 </div>
             </div>
-            <div class="lg:max-w-[768px] relative w-full border border-[#FFFFFF1A] rounded-[20px] px-4 lg:pl-[84px] md:pr-4 pt-4 pb-6"
+            <div class="lg:max-w-[768px]  relative w-full border border-[#FFFFFF1A] rounded-[20px] px-4 lg:pl-[84px] md:pr-4 pt-4 pb-6"
                 style="background: linear-gradient(0deg, rgba(14, 15, 17, 0.5), rgba(14, 15, 17, 0.5)), linear-gradient(168.66deg, #161B1F 11.58%, rgba(22, 27, 31, 0) 72.75%); width: 100%; ">
                 <div class="max-md:hidden absolute top-0 left-0 md:left-[55px]">
                     <svg width="134" height="55" viewBox="0 0 134 55" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -253,7 +258,7 @@
                     border-image-source: linear-gradient(262.74deg, rgba(255, 255, 255, 0.1) 12.49%, rgba(255, 255, 255, 0.05) 102.33%),
                     radial-gradient(129.17% 687.04% at 102.36% 129.17%, rgba(255, 255, 255, 0) 14.78%, rgba(255, 255, 255, 0.5) 66%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
                     ">
-                        <p class="text-[#FFFFFF] leading-[10px] text-sm">Log In</p>
+                        <p class="font-semibold text-[#FFFFFF]  text-sm leading-[10px]">Log In</p>
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M11.6204 5.95312L15.667 9.99979L11.6204 14.0465" stroke="white" stroke-width="1.5"
                                 stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
@@ -263,7 +268,7 @@
                     </a>
                 </div>
                 <h1 class="font-normal md:text-2xl text-xl mb-2 text-[#FFFFFF] leading-7">Before You Start</h1>
-                <p class="font-normal text-sm text-[#FFFFFF80] mb-8 leading-4">Please complete these fields to proceed
+                <p class="font-normal text-sm text-[#FFFFFF80] mb-8 leading-[10px]">Please complete these fields to proceed
                 </p>
                 <form class="flex flex-col gap-y-4 max-w-[567px] ">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -667,7 +672,7 @@
                                 </svg>
                             </button>
                         </div>
-                        <div class="list_city_modal z-30 h-0 overflow-hidden max-h-[200px] md:max-h-[345px] transition-all duration-300 rounded-2xl absolute w-full  border border-transparent"
+                        <div class="list_city_modal z-30 h-0 overflow-hidden max-h-[200px] md:max-h-[250px] transition-all duration-300 rounded-2xl absolute w-full  border border-transparent"
                             style="background-image: linear-gradient(168.66deg, #161B1F 11.58%, rgba(22, 27, 31, 0) 72.75%), linear-gradient(0deg, #0E0F11, #0E0F11);">
                             <div class="flex items-center justify-between py-3 px-4 border-b border-[#FFFFFF1A]">
                                 <input autocomplete="off" type="search"
@@ -687,7 +692,7 @@
                             </div>
                             <div class="pr-[7px]">
                                 <ul
-                                    class="max-h-[200px] md:max-h-[300px]  list_city_modal__list overscroll-y-auto custom-scrollbar pr-[7px] pb-24">
+                                    class="max-h-[200px] md:max-h-[250px]  list_city_modal__list overscroll-y-auto custom-scrollbar pr-[7px] pb-12">
                                     <div class="">
                                         <li
                                             class="list_city_item cursor-pointer flex items-center justify-between  p-[12px] hover:bg-[#FFFFFF0D] mb-2">
@@ -876,10 +881,17 @@
                                 entered</span>
                         </div>
                     </div>
+                    <div class="flex items-center gap-2 mb-12">
+                        <input autocomplete="off" type="checkbox" name="checkbox" id="checkbox"
+                            class="custom-checkbox mt-0">
+                        <label for="checkbox"
+                            class="cursor-pointer font-normal text-sm text-[#FFFFFF] leading-[10px]">
+                            I confirm that my name is correct and matches my government issued ID
+                        </label>
+                    </div>
                     <div class="flex items-center ">
                         <button type="submit"
-                            class="bg-[#FFFFFF] max-w-[108px] w-full flex items-center gap-4 pr-1 pl-5 py-1 rounded-xl"
-                            style="box-shadow: 0px 0px 20px 0px #FFFFFF80;">
+                            class="submit_btn transition-all duration-300 bg-[#FFFFFF] max-w-[108px] w-full flex items-center gap-4 pr-1 pl-5 py-1 rounded-xl">
                             <p class="font-semibold text-sm leading-[10px]">
                                 Next
                             </p>
@@ -919,7 +931,7 @@
                     </svg>
                 </button>
                 <div class="z-[-1] absolute bottom-0 right-0 ">
-                    <img src="./img/gridbg.png" alt="">
+                    <img src="./img/gridBg.svg" alt="">
                 </div>
             </div>
         </div>

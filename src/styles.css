@@ -52,6 +52,9 @@
     border: 1px solid  #FFFBA1 !important;
     margin-bottom: 7px !important;
 }
+.submit_btn:hover{
+    box-shadow: 0px 0px 20px 0px #FFFFFF80
+}
 
 @media (max-width: 445px) {
     .google {
